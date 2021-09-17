@@ -5,7 +5,8 @@ let state = {};
 
 function startGame() {
   state = {};
-  showTextNode(1);
+  // showTextNode(1);
+  showTextNode(100);
 }
 
 function showTextNode(textNodeIndex) {
@@ -54,8 +55,19 @@ function selectOption(option) {
 
 const textNodes = [
   {
+    id: 100,
+    text: "Welcome to Choose your own adventure! Click on the Button to play the game!",
+    options: [
+      {
+        text: "Play",
+        nextText: 1,
+      },
+    ],
+  },
+  {
     id: 1,
     text: "You wake up in a strange place and you see a sparkling blue orb near you.",
+    back: "Orb",
     options: [
       {
         text: "Take the orb",
