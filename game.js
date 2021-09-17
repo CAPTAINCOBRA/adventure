@@ -15,6 +15,18 @@ function showTextNode(textNodeIndex) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
+  //Bug eka starts
+  if (textNode.back) {
+    const bady = document.getElementById("bady");
+    // bady.classList.remove();
+    bady.removeAttribute("class");
+    bady.classList.add(textNode.back);
+  } else {
+    const bady = document.getElementById("bady");
+    bady.classList.add("baady");
+  }
+  //Bug eka ends
+
   textNode.options.forEach((option) => {
     if (showOption(option)) {
       const button = document.createElement("button");
@@ -43,44 +55,46 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: "You wake up in a strange place and you see a jar of blue goo near you.",
+    text: "You wake up in a strange place and you see a sparkling blue orb near you.",
     options: [
       {
-        text: "Take the goo",
-        setState: { blueGoo: true },
+        text: "Take the orb",
+        setState: { blueOrb: true },
         nextText: 2,
       },
       {
-        text: "Leave the goo",
+        text: "Leave the orb",
         nextText: 2,
       },
     ],
   },
   {
     id: 2,
-    text: "You venture forth in search of answers to where you are when you come across a merchant.",
+    text: "You venture forth in search of answers to where you are when you come across a blacksmith.",
+    back: "Blacksmith",
     options: [
       {
-        text: "Trade the goo for a sword",
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, sword: true },
+        text: "Trade the orb for a sword",
+        requiredState: (currentState) => currentState.blueOrb,
+        setState: { blueOrb: false, sword: true },
         nextText: 3,
       },
       {
-        text: "Trade the goo for a shield",
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, shield: true },
+        text: "Trade the orb for a shield",
+        requiredState: (currentState) => currentState.blueOrb,
+        setState: { blueOrb: false, shield: true },
         nextText: 3,
       },
       {
-        text: "Ignore the merchant",
+        text: "Ignore the blacksmith",
         nextText: 3,
       },
     ],
   },
   {
     id: 3,
-    text: "After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.",
+    text: "After leaving the blacksmith you start to feel tired and stumble upon a small town next to a dangerous looking castle.",
+    back: "Castle",
     options: [
       {
         text: "Explore the castle",
@@ -98,7 +112,8 @@ const textNodes = [
   },
   {
     id: 4,
-    text: "You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.",
+    text: "You are so tired that you fall asleep while exploring the castle and are killed by some terrible dragon in your sleep.",
+    back: "DragonEat",
     options: [
       {
         text: "Restart",
@@ -109,6 +124,7 @@ const textNodes = [
   {
     id: 5,
     text: "Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.",
+    back: "Inn",
     options: [
       {
         text: "Restart",
@@ -119,6 +135,7 @@ const textNodes = [
   {
     id: 6,
     text: "You wake up well rested and full of energy ready to explore the nearby castle.",
+    back: "Hay",
     options: [
       {
         text: "Explore the castle",
@@ -128,7 +145,8 @@ const textNodes = [
   },
   {
     id: 7,
-    text: "While exploring the castle you come across a horrible monster in your path.",
+    text: "While exploring the castle you come across a horrible dragon in your path.",
+    back: "MonsterCastle",
     options: [
       {
         text: "Try to run",
@@ -145,15 +163,16 @@ const textNodes = [
         nextText: 10,
       },
       {
-        text: "Throw the blue goo at it",
-        requiredState: (currentState) => currentState.blueGoo,
+        text: "Throw the blue orb at it",
+        requiredState: (currentState) => currentState.blueOrb,
         nextText: 11,
       },
     ],
   },
   {
     id: 8,
-    text: "Your attempts to run are in vain and the monster easily catches.",
+    text: "Your attempts to run are in vain and the dragon easily catches.",
+    back: "DragonHideRun",
     options: [
       {
         text: "Restart",
@@ -163,7 +182,8 @@ const textNodes = [
   },
   {
     id: 9,
-    text: "You foolishly thought this monster could be slain with a single sword.",
+    text: "You foolishly thought this dragon could be slain with a single sword.",
+    back: "DragonSword",
     options: [
       {
         text: "Restart",
@@ -173,7 +193,8 @@ const textNodes = [
   },
   {
     id: 10,
-    text: "The monster laughed as you hid behind your shield and ate you.",
+    text: "The dragon laughed as you hid behind your shield and ate you.",
+    back: "DragonShield",
     options: [
       {
         text: "Restart",
@@ -183,7 +204,8 @@ const textNodes = [
   },
   {
     id: 11,
-    text: "You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.",
+    text: "You threw your shiny orb at the dragon and it exploded. After the dust settled you saw the dragon was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.",
+    back: "DragonKilled",
     options: [
       {
         text: "Congratulations. Play Again.",
