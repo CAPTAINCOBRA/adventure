@@ -26,6 +26,7 @@ function showTextNode(textNodeIndex) {
     const bady = document.getElementById("bady");
     bady.classList.add("baady");
   }
+
   //Bug eka ends
 
   textNode.options.forEach((option) => {
@@ -36,6 +37,24 @@ function showTextNode(textNodeIndex) {
       button.classList.add("btn-info");
       button.addEventListener("click", () => selectOption(option));
       optionButtonsElement.appendChild(button);
+      //Bug eka
+      if (textNode.options[0].win) {
+        console.log(textNode.options[0].win);
+        // button.addEventListener("click", party.confetti(button));
+        // button.addEventListener("onmousedown", party.confetti(this));
+        party.confetti(button, {
+          // count: party.variation.range(50000, 40000),
+          count: party.variation.range(5000, 5000),
+        });
+
+        setTimeout(() => {
+          const partyDiv = document.getElementById("party-js-container");
+          // partyDiv.style.width = "1000px !important";
+          partyDiv.style.position = "fixed";
+          // partyDiv.classList.add("positioFixed");
+        }, 10);
+      }
+      //Bug eka ends
     }
   });
 }
@@ -78,6 +97,14 @@ const textNodes = [
         text: "Leave the orb",
         nextText: 2,
       },
+      {
+        text: "Destroy the Orb",
+        nextText: 21,
+      },
+      {
+        text: "Go back to sleep.",
+        nextText: 23,
+      },
     ],
   },
   {
@@ -101,6 +128,10 @@ const textNodes = [
         text: "Ignore the blacksmith",
         nextText: 3,
       },
+      {
+        text: "Rob the blacksmith.",
+        nextText: 22,
+      },
     ],
   },
   {
@@ -111,6 +142,10 @@ const textNodes = [
       {
         text: "Explore the castle",
         nextText: 4,
+      },
+      {
+        text: "Explore the castle dungeons",
+        nextText: 24,
       },
       {
         text: "Find a room to sleep at in the town",
@@ -222,6 +257,230 @@ const textNodes = [
       {
         text: "Congratulations. Play Again.",
         nextText: -1,
+        win: true,
+      },
+    ],
+  },
+  {
+    id: 21,
+    text: "There is a blast of blue light and it engulfs you. RIP.",
+    back: "OrbBlast",
+    options: [
+      {
+        text: "Restart.",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 22,
+    text: "Blacksmith's workers come and arrest you and have the town guard lock you in a cell.",
+    back: "LockedCell",
+    options: [
+      {
+        text: "Restart.",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 23,
+    text: "Why were you even born?",
+    // back: "DragonKilled",
+    options: [
+      {
+        text: "Restart.",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 24,
+    text: "While exploring the dungeons, you come accross 2 passageways",
+    back: "Dungeons",
+    options: [
+      {
+        text: "Go left",
+        nextText: 25,
+      },
+      {
+        text: "Go right",
+        nextText: 26,
+      },
+    ],
+  },
+  {
+    id: 25,
+    text: "You walk for some time and see large cobwebs hanging from the walls. And that is when you come face to face with a giant Troll",
+    back: "Troll",
+    options: [
+      {
+        text: "Run",
+        nextText: 27,
+      },
+      {
+        text: "Throw the Orb at the Troll",
+        requiredState: (currentState) => currentState.blueOrb,
+        nextText: 28,
+      },
+      {
+        text: "Attack the Troll with your sword",
+        requiredState: (currentState) => currentState.sword,
+        nextText: 29,
+      },
+      {
+        text: "Hide behind your shield",
+        requiredState: (currentState) => currentState.shield,
+        nextText: 30,
+      },
+    ],
+  },
+  {
+    id: 27,
+    text: "You somehow manage to outrun the Troll and manage to reach the exit of that tunnel",
+    back: "TrollEscape",
+    options: [
+      {
+        text: "Explore the castle instead",
+        nextText: 7,
+      },
+    ],
+  },
+  {
+    id: 28,
+    text: "The troll catches the Orb and eats it up before gobbling you down as well",
+    back: "TrollEat",
+    options: [
+      {
+        text: "Next",
+        nextText: 31,
+      },
+    ],
+  },
+  {
+    id: 29,
+    text: "The best defense is a good offence. You hack fiercely at the troll with the sword and finally manage to strike it deep in the heart. Congratulations for surviving the ordeal",
+    back: "TrollSword",
+    options: [
+      {
+        text: "Congratulations. Play Again.",
+        nextText: -1,
+        win: true,
+      },
+    ],
+  },
+  {
+    id: 30,
+    text: "The troll tears through your shield and shreds you to pieces",
+    back: "TrollKill",
+    options: [
+      {
+        text: "Restart.",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 31,
+    text: "Inside the stomach, Orb explodes and the troll cries in agony before dying. But you are no longer alive to witness your pyrhic victory. Indeed how pathetic!",
+    back: "TrollDead",
+    options: [
+      {
+        text: "Restart.",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 26,
+    text: "You come accross a large well lit hall which holds large amounts of treasure. But there is one small problem. ",
+    back: "Treasures",
+    options: [
+      {
+        text: "What's a small problem in the grand scheme of things?",
+        nextText: 32,
+      },
+    ],
+  },
+  {
+    id: 32,
+    text: "In the middle of the hall is a Sphinx guarding the treasure. ",
+    back: "Sphinx",
+    options: [
+      {
+        text: "Run",
+        nextText: 33,
+      },
+      {
+        text: "Attack the Sphinx with your sword",
+        requiredState: (currentState) => currentState.sword,
+        nextText: 34,
+      },
+      {
+        text: "Throw the Orb at the Sphinx",
+        requiredState: (currentState) => currentState.blueOrb,
+        nextText: 35,
+      },
+      {
+        text: "Hide behind your shield",
+        requiredState: (currentState) => currentState.shield,
+        nextText: 36,
+      },
+    ],
+  },
+  {
+    id: 33,
+    text: "No matter how fast you run, you are no match for the mighty Sphinx. You make for a good dinner! If only you had waited for the Sphinx to ask his riddle",
+    back: "SphinxRun",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 34,
+    text: "You mere mortals and your hubris. You think you can fight the legendary Sphinx? That too with a single sword?",
+    back: "SphinxHubris",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 35,
+    text: "The sphinx staggers back in shock as it turns blue and a light explosion knocks you both off your feet. The Sphinx is blown away in the explosion.",
+    back: "SphinxDead",
+    options: [
+      {
+        text: "Next",
+        nextText: 37,
+      },
+    ],
+  },
+  {
+    id: 36,
+    text: "The Sphinx laughed his human head off at your antics before making dinner of you!",
+    back: "SphinxKill",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 37,
+    text: "While you survived the explosion somehow, the treasure did not. But at least ou are alive. This is what happens when you enter dungeons!",
+    back: "TreasureGone",
+    options: [
+      {
+        text: "Congratulations. Play Again.",
+        nextText: -1,
+        win: true,
       },
     ],
   },

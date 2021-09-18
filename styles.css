@@ -20,10 +20,7 @@ body {
     url("Monsters.jpg"); */
   background-size: cover;
   background-position: center;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center;
-  text-align: center; */
+  text-align: center;
 }
 
 .containerz {
@@ -238,6 +235,230 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.OrbBlast {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("OrbBlast.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.LockedCell {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("LockedCell.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.Dungeons {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("Dungeons.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.Troll {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("Troll.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.TrollEat {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("TrollEat.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.TrollSword {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("TrollSword.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.TrollKill {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("TrollKill.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.Treasures {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("Treasures.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.Sphinx {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("Sphinx.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.SphinxRun {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("SphinxRun.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.SphinxKill {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("SphinxKill.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+.SphinxHubris {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("SphinxHubris.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.SphinxDead {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("SphinxDead.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TreasureGone {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("TreasureGone.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TrollDead {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("TrollDead.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TrollEscape {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("TrollEscape.jpg");
+  background-size: cover;
+  background-position: right;
+}
 /* .baady {
   padding: 0;
   margin: 0;
@@ -252,3 +473,7 @@ body {
   background-size: cover;
   background-position: center;
 } */
+
+.positioFixed {
+  position: fixed;
+}
