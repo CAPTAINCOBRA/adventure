@@ -15,7 +15,7 @@ body {
   height: 100vh;
   background-color: #345;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("Monsters.jpg");
+    url("assets/Monsters.jpg");
   /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("Monsters.jpg"); */
   background-size: cover;
@@ -73,6 +73,13 @@ body {
   /* background-color: rgb(82, 88, 94); */
 }
 
+.text-title {
+  /* color: rgb(97, 155, 212); */
+  color: rgb(132 175 217);
+  /* color: white; */
+  /* background-color: rgb(82, 88, 94); */
+}
+
 .titleContainer {
   display: flex;
   top: 5%;
@@ -91,7 +98,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("Orb.jpg");
+    url("assets/Orb.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -105,7 +112,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("Blacksmith.jpg");
+    url("assets/Blacksmith.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -119,7 +126,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("Castle.jpg");
+    url("assets/Castle.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -133,7 +140,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("DragonEat.jpg");
+    url("assets/DragonEat.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -147,7 +154,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("Inn.jpg");
+    url("assets/Inn.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -161,7 +168,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("Hay.jpg");
+    url("assets/Hay.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -175,7 +182,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("MonsterCastle.jpg");
+    url("assets/MonsterCastle.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -189,7 +196,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("DragonHideRun.jpg");
+    url("assets/DragonHideRun.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -203,7 +210,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("DragonSwordi.jpg"); /*DragonSwords*/
+    url("assets/DragonSwordi.jpg"); /*DragonSwords*/
   background-size: cover;
   background-position: center;
 }
@@ -217,7 +224,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("DragonShield.jpg");
+    url("assets/DragonShield.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -231,7 +238,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("DragonKilled.jpg");
+    url("assets/DragonKilled.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -245,7 +252,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("OrbBlast.jpg");
+    url("assets/OrbBlast.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -259,7 +266,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("LockedCell.jpg");
+    url("assets/LockedCell.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -273,7 +280,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("Dungeons.jpg");
+    url("assets/Dungeons.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -287,7 +294,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("Troll.jpg");
+    url("assets/Troll.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -301,7 +308,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("TrollEat.jpg");
+    url("assets/TrollEat.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -315,7 +322,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("TrollSword.jpg");
+    url("assets/TrollSword.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -329,7 +336,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("TrollKill.jpg");
+    url("assets/TrollKill.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -343,7 +350,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("Treasures.jpg");
+    url("assets/Treasures.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -357,7 +364,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("Sphinx.jpg");
+    url("assets/Sphinx.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -371,7 +378,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("SphinxRun.jpg");
+    url("assets/SphinxRun.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -385,7 +392,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("SphinxKill.gif");
+    url("assets/SphinxKill.gif");
   background-size: cover;
   background-position: center;
 }
@@ -399,7 +406,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("SphinxHubris.jpg");
+    url("assets/SphinxHubris.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -413,7 +420,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("SphinxDead.jpg");
+    url("assets/SphinxDead.jpg");
   background-size: cover;
   background-position: right;
 }
@@ -427,7 +434,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("TreasureGone.jpg");
+    url("assets/TreasureGone.jpg");
   background-size: cover;
   background-position: right;
 }
@@ -441,7 +448,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("TrollDead.jpg");
+    url("assets/TrollDead.jpg");
   background-size: cover;
   background-position: right;
 }
@@ -455,10 +462,683 @@ body {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("TrollEscape.jpg");
+    url("assets/TrollEscape.jpg");
   background-size: cover;
   background-position: right;
 }
+
+.SphinxRiddle {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/SphinxRiddle.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.SphinxRiddler {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/SphinxRiddler.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.Riddle {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/Riddle.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.RingToRule {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/RingToRule.png");
+  background-size: cover;
+  background-position: right;
+}
+
+.CastleGround {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CastleGround.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.LakeWoman {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/LakeWoman.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.CastleGrounds {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CastleGrounds.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.AnimalPigs {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/AnimalPigs.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.Piggies {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/Piggies.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.WomanLakeIgnore {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/WomanLakeIgnore.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.LakeTeaWoman {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/LakeTeaWoman.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.Circe {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/Circe.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TeaLady {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/TeaLady.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.ForestLostIn {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/ForestLostIn.png");
+  background-size: cover;
+  background-position: right;
+}
+
+.ForestClearing {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/ForestClearing.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.JungleMonster {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/JungleMonster.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.JungleFight {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/JungleFight.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.MonsterSeesYou {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/MonsterSeesYou.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.DungeonReturn {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/DungeonReturn.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.ReadyToFight {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/ReadyToFight.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TrollEating {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/TrollEating.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TrollFight {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/TrollFight.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.Cliff {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/Cliff.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.CliffCave {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CliffCave.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TigerEmerge {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/TigerEmerge.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TigerTrap {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/TigerTrap.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TigerSword {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/TigerSword.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TigerRip {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/TigerRip.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.CaveBones {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CaveBones.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.BonesCave {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/BonesCave.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.CyclopsLift {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CyclopsLift.webp");
+  background-size: cover;
+  background-position: right;
+}
+
+.CyclopsLose {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CyclopsLose.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.FoolCyclops {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/FoolCyclops.webp");
+  background-size: cover;
+  background-position: right;
+}
+
+.CyclopsMouth {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CyclopsMouth.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.SleepingCyclops {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/SleepingCyclops.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.CyclopsKill {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CyclopsKill.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.CyclopsGobble {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CyclopsGobble.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.CyclopsMercy {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CyclopsMercy.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.CyclopsBaton {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CyclopsBaton.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.CyclopsNoOne {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/CyclopsNoOne.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.VictoryCyclops {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/VictoryCyclops.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TrollAttack {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/TrollAttack.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.TigerEscaped {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/TigerEscaped.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.GoToCastle {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/GoToCastle.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.ForestEdge {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/ForestEdge.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.LadyOfTheLake {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/LadyOfTheLake.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.GetALife {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/GetALife.gif");
+  background-size: cover;
+  background-position: right;
+}
+
+.Sleep {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("assets/Sleep.gif");
+  background-size: cover;
+  background-position: right;
+}
+
 /* .baady {
   padding: 0;
   margin: 0;

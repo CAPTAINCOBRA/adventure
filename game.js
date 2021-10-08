@@ -54,6 +54,23 @@ function showTextNode(textNodeIndex) {
           // partyDiv.classList.add("positioFixed");
         }, 10);
       }
+
+      // Welcome salutation
+      if (textNode.salut && textNode.byLine) {
+        const titleH1 = document.getElementById("title");
+        titleH1.innerText = textNode.salut;
+
+        const byLineCite = document.getElementById("byLine");
+        byLineCite.innerText = textNode.byLine;
+      } else {
+        const titleP = document.getElementById("title");
+        titleP.remove();
+
+        const byLineCite = document.getElementById("caption");
+        byLineCite.remove();
+      }
+      //Welcome salutation ends
+
       //Bug eka ends
     }
   });
@@ -76,6 +93,8 @@ const textNodes = [
   {
     id: 100,
     text: "Welcome to Choose your own adventure! Click on the Button to play the game!",
+    salut: "Choose your own adventure!",
+    byLine: "By Ekansh Baweja",
     options: [
       {
         text: "Play",
@@ -286,11 +305,15 @@ const textNodes = [
   {
     id: 23,
     text: "Why were you even born?",
-    // back: "DragonKilled",
+    back: "Sleep",
     options: [
       {
-        text: "Restart.",
+        text: "Restart",
         nextText: -1,
+      },
+      {
+        text: "Get a life",
+        nextText: 38,
       },
     ],
   },
@@ -301,10 +324,12 @@ const textNodes = [
     options: [
       {
         text: "Go left",
+        setState: { rightBranch: false, leftBranch: true },
         nextText: 25,
       },
       {
         text: "Go right",
+        setState: { rightBranch: true, leftBranch: false },
         nextText: 26,
       },
     ],
@@ -343,6 +368,15 @@ const textNodes = [
       {
         text: "Explore the castle instead",
         nextText: 7,
+      },
+      {
+        text: "Explore the right branch of the dungeon",
+        requiredState: (currentState) => currentState.leftBranch,
+        nextText: 26,
+      },
+      {
+        text: "Explore the castle grounds",
+        nextText: 46,
       },
     ],
   },
@@ -430,12 +464,12 @@ const textNodes = [
   },
   {
     id: 33,
-    text: "No matter how fast you run, you are no match for the mighty Sphinx. You make for a good dinner! If only you had waited for the Sphinx to ask his riddle",
+    text: "No matter how fast you run, you are no match for the mighty Sphinx. It blocks the entrance and opens its mouth to.....",
     back: "SphinxRun",
     options: [
       {
-        text: "Restart",
-        nextText: -1,
+        text: "Next",
+        nextText: 39,
       },
     ],
   },
@@ -481,6 +515,665 @@ const textNodes = [
         text: "Congratulations. Play Again.",
         nextText: -1,
         win: true,
+      },
+    ],
+  },
+  {
+    id: 38,
+    text: "We don't sell that here",
+    back: "GetALife",
+    options: [
+      {
+        text: "Restart.",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 39,
+    text: "Ask you a riddle!",
+    back: "SphinxRiddle",
+    options: [
+      {
+        text: "Bring it on",
+        nextText: 40,
+      },
+      {
+        text: "Refuse",
+        nextText: 41,
+      },
+    ],
+  },
+  {
+    id: 41,
+    text: "You thought you had a choice? Did you look at the Sphinx? Before you can change your mind, it Stomps you down into the ground.",
+    back: "SphinxKill",
+    options: [
+      {
+        text: "Restart.",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 40,
+    text: "What breathes, consumes, and grows, but was and never will be alive?",
+    back: "Riddle",
+    options: [
+      {
+        text: "Tree",
+        nextText: 44,
+      },
+      {
+        text: "Virus",
+        nextText: 44,
+      },
+      {
+        text: "Fire",
+        nextText: 42,
+      },
+      {
+        text: "Sphinx",
+        nextText: 44,
+      },
+    ],
+  },
+  {
+    id: 42,
+    text: "You gave the correct answer! The Sphinx is happy and lets you have any one piece from the treasure.",
+    back: "SphinxRiddler",
+    options: [
+      {
+        text: "Next",
+        nextText: 43,
+      },
+    ],
+  },
+  {
+    id: 44,
+    text: "You should have taken this more seriously. Your answer is wrong, before you can change it, Sphinx stomps you into the ground.",
+    back: "SphinxKill",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 43,
+    text: "Your eyes fall upon a beautiful ring lying in the middle of the treasure. You choose it. The Sphinx has no choice but to agree. As you return back, you hear him mutter - Let the games begin!",
+    back: "RingToRule",
+    options: [
+      {
+        text: "Next",
+        nextText: 45,
+      },
+    ],
+  },
+  {
+    id: 45,
+    text: "As you come out of the tunnel. You ",
+    back: "DungeonReturn",
+    options: [
+      {
+        text: "Explore the castle instead",
+        nextText: 7,
+      },
+      {
+        text: "Explore the castle grounds",
+        nextText: 46,
+      },
+      {
+        text: "Explore the left branch of the dungeons",
+        requiredState: (currentState) => currentState.rightBranch,
+        nextText: 25,
+      },
+    ],
+  },
+  {
+    id: 46,
+    text: "As you enter the large grounds that surround the castle, you are overwhelmed by the vastness of the estate. It is large and creepy with forests, corn fields and even a lake.",
+    back: "CastleGround",
+    options: [
+      {
+        text: "Explore the lake",
+        setState: { lakeVisit: true, forestVisit: false, fieldVisit: false },
+        nextText: 47,
+      },
+      {
+        text: "Explore the forest",
+        setState: { lakeVisit: false, forestVisit: true, fieldVisit: false },
+        nextText: 56,
+      },
+      {
+        text: "Explore the corn field",
+        setState: { lakeVisit: false, forestVisit: false, fieldVisit: true },
+        nextText: 66,
+      },
+    ],
+  },
+  {
+    id: 47,
+    text: "As you near the lake, you hear a beautiful voice. You follow the voice and come across a beautiful woman singing. You",
+    back: "LakeWoman",
+    options: [
+      {
+        text: "Approach her and compliment her voice",
+        nextText: 48,
+      },
+      {
+        text: "Admire her singing from afar and go back",
+        nextText: 53,
+      },
+    ],
+  },
+  {
+    id: 48,
+    text: "As you walk towards her, you notice a large number of pigs and other animals in the surroundings.",
+    back: "AnimalPigs",
+    options: [
+      {
+        text: "Next",
+        nextText: 49,
+      },
+    ],
+  },
+  {
+    id: 49,
+    text: "You introduce yourself and can't help but get enchanted with her voice. She offers you a tea. You ",
+    back: "LakeTeaWoman",
+    options: [
+      {
+        text: "Inquire about the Pigs",
+        nextText: 50,
+      },
+      {
+        text: "Politely refuse it",
+        nextText: 52,
+      },
+      {
+        text: "Accept the tea",
+        nextText: 54,
+      },
+    ],
+  },
+  {
+    id: 50,
+    text: "Classy move Casanova! Talk about pigs to women.",
+    back: "Piggies",
+    options: [
+      {
+        text: "She answers by ",
+        nextText: 51,
+      },
+    ],
+  },
+  {
+    id: 51,
+    text: "dismissing your question vaguely and goes back to her singing ignoring you completely, Some lessons are learnt the hard way young Padwan.",
+    back: "WomanLakeIgnore",
+    options: [
+      {
+        text: "Explore the lake",
+        requiredState: (currentState) => !currentState.lakeVisit,
+        // setState: { lakeVisit: true, forestVisit: false, fieldVisit:false },
+        nextText: 47,
+      },
+      {
+        text: "Explore the forest",
+        setState: { lakeVisit: true, forestVisit: true, fieldVisit: false },
+        nextText: 56,
+      },
+      {
+        text: "Explore the corn field",
+        setState: { lakeVisit: true, forestVisit: false, fieldVisit: true },
+        nextText: 66,
+      },
+    ],
+  },
+  {
+    id: 52,
+    text: "You are not a simp and you smell something fishy. Good sense prevails for now and you...",
+    back: "LadyOfTheLake",
+    options: [
+      {
+        text: "Politely Refuse and go back",
+        // setState: { lakeVisit: true, forestVisit: false, fieldVisit:false },
+        nextText: 53,
+      },
+    ],
+  },
+  {
+    id: 53,
+    text: "You make your way back to the castle grounds",
+    back: "CastleGrounds",
+    options: [
+      {
+        text: "Explore the forest",
+        setState: { lakeVisit: true, forestVisit: true, fieldVisit: false },
+        nextText: 56,
+      },
+      {
+        text: "Explore the corn field",
+        setState: { lakeVisit: true, forestVisit: false, fieldVisit: true },
+        nextText: 66,
+      },
+    ],
+  },
+  {
+    id: 54,
+    text: "You slurp it down. It's the best tea you have ever tasted. You suddenly feel weird.",
+    back: "TeaLady",
+    options: [
+      {
+        text: "Next",
+
+        nextText: 55,
+      },
+    ],
+  },
+  {
+    id: 55,
+    text: "Unfortunately for you the woman is Circe and the tea had a magical portion in it that turns men into pigs. You should have seen the warning signs but you were not thinking with our brain, were you?. Too bad you can't do anything but burp.",
+    back: "Circe",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 56,
+    text: "In the forest you get lost and start walking in large circles. You hear a loud noise. You",
+    back: "ForestLostIn",
+    options: [
+      {
+        text: "Follow the voice",
+        nextText: 58,
+      },
+      {
+        text: "Run back",
+        nextText: 57,
+      },
+    ],
+  },
+  {
+    id: 57,
+    text: "That was a smart move. You reach the edge of the forest where you entered.",
+    back: "ForestEdge",
+    options: [
+      {
+        text: "Explore the corn field",
+        requiredState: (currentState) => !currentState.fieldVisit,
+        nextText: 66,
+      },
+      {
+        text: "Explore the lake",
+        requiredState: (currentState) => !currentState.lakeVisit,
+        nextText: 47,
+      },
+    ],
+  },
+  {
+    id: 58,
+    text: "You come to a clearing in the middle of the forest. There sitting in the middle of the clearing is...",
+    back: "ForestClearing",
+    options: [
+      {
+        text: "Next",
+        nextText: 59,
+      },
+    ],
+  },
+  {
+    id: 59,
+    text: "A Giant Troll",
+    back: "JungleMonster",
+    options: [
+      {
+        text: "Challenge it to a fight",
+        nextText: 60,
+      },
+      {
+        text: "Slip back quietly and get back to the safety of the castle",
+        nextText: 61,
+      },
+    ],
+  },
+  {
+    id: 61,
+    text: "Unfortunately for you, you are not spiderman and you make a lot of noise and the troll sees you. You have no choice but to face your opponent.",
+    back: "MonsterSeesYou",
+    options: [
+      {
+        text: "Next",
+        nextText: 60,
+      },
+    ],
+  },
+  {
+    id: 60,
+    text: "You get ready to fight",
+    back: "ReadyToFight",
+    options: [
+      {
+        text: "Throw the Orb at the Troll",
+        requiredState: (currentState) => currentState.blueOrb,
+        nextText: 62,
+      },
+      {
+        text: "Attack the Troll with your sword",
+        requiredState: (currentState) => currentState.sword,
+        nextText: 63,
+      },
+      {
+        text: "Hide behind your shield",
+        requiredState: (currentState) => currentState.shield,
+        nextText: 64,
+      },
+    ],
+  },
+  {
+    id: 63,
+    text: "The best defense is a good offence. You hack fiercely at the troll with the sword and finally manage to strike it deep in the heart. Congratulations for surviving the ordeal!",
+    back: "JungleFight",
+    options: [
+      {
+        text: "Congratulations. Play Again.",
+        nextText: -1,
+        win: true,
+      },
+    ],
+  },
+  {
+    id: 62,
+    text: "The troll catches the Orb and eats it up before gobbling you down as well.",
+    back: "TrollEating",
+    options: [
+      {
+        text: "Next",
+        nextText: 65,
+      },
+    ],
+  },
+  {
+    id: 65,
+    text: "Apparently the Orb was completely useless. And so were you. Indeed how pathetic!",
+    back: "TrollAttack",
+    options: [
+      {
+        text: "Restart.",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 64,
+    text: "The troll tears through your shield and shreds you to pieces.",
+    back: "TrollFight",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 66,
+    text: "The fields has cliffs overlooking the sea. As you are exploring the fields near the cliff, you hear a small growl.",
+    back: "Cliff",
+    options: [
+      {
+        text: "Next",
+        nextText: 67,
+      },
+    ],
+  },
+  {
+    id: 67,
+    text: "Before you have a chance to do anything, a Tiger emerges from behind the bushes paralyzing you with fear and charges at its lunch which is you by the way.",
+    back: "TigerEmerge",
+    options: [
+      {
+        text: "Next",
+        nextText: 68,
+      },
+    ],
+  },
+  {
+    id: 68,
+    text: "Before it can take the final leap at you, its feet get stuck in a bear trap and it roars out in pain. And you overcome your paralysis and ",
+    back: "TigerTrap",
+    options: [
+      {
+        text: "Run towards the cliff",
+        nextText: 71,
+      },
+      {
+        text: "Attack the tiger with your sword",
+        requiredState: (currentState) => currentState.sword,
+        nextText: 69,
+      },
+    ],
+  },
+  {
+    id: 69,
+    text: "Just because you bought a sword does not make you a swordsman. You swing like a 6 year old girl and miss.",
+    back: "TigerSword",
+    options: [
+      {
+        text: "Next",
+        nextText: 70,
+      },
+    ],
+  },
+  {
+    id: 70,
+    text: "The Tiger for its part doesn't and in one swift motion rips your head off.",
+    back: "TigerRip",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 71,
+    text: "You run towards the cliff and come across a cave",
+    back: "CliffCave",
+    options: [
+      {
+        text: "Explore the cave",
+        nextText: 72,
+      },
+      {
+        text: "Make your way back to the castle",
+        nextText: 7,
+      },
+    ],
+  },
+  {
+    id: 72,
+    text: "As you enter the cave, you find it littered with bones. But that doesn't stop you because you are very brave as just witnessed by the Tiger who was trapped.",
+    back: "CaveBones",
+    options: [
+      {
+        text: "Next",
+        nextText: 73,
+      },
+    ],
+  },
+  {
+    id: 73,
+    text: "Or maybe you don't stop and wonder who those bones belong to because you think you are the only smart guy on the planet who came across this cave.",
+    back: "BonesCave",
+    options: [
+      {
+        text: "Next",
+        nextText: 74,
+      },
+    ],
+  },
+  {
+    id: 74,
+    text: "As you venture further into the cave, you come across a giant sleeping monster with one eye on its head. ",
+    back: "SleepingCyclops",
+    options: [
+      {
+        text: "Next",
+        nextText: 75,
+      },
+    ],
+  },
+  {
+    id: 75,
+    text: "Its a Cyclops. Before you can run, it opens its eyes and in one swift motion, grabs you and lifts you up. You",
+    back: "CyclopsLift",
+    options: [
+      {
+        text: "Poke the Cyclops in the eye with your sword",
+        requiredState: (currentState) => currentState.sword,
+        nextText: 76,
+      },
+      {
+        text: "Beg him to release you",
+        nextText: 77,
+      },
+      {
+        text: "Introduce yourself",
+        nextText: 78,
+      },
+    ],
+  },
+  {
+    id: 77,
+    text: "You should know better than to beg for mercy from monsters. By the time you realize your folly, it gobbles you up as an evening snack.",
+    back: "CyclopsGobble",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 76,
+    text: "You successfully manage to blind the Cyclops and it loses its grip on you. But unfortunately for you, it only makes it more angry and it lashes out. You",
+    back: "CyclopsKill",
+    options: [
+      {
+        text: "Find this as a golden opportunity to run",
+        nextText: 79,
+      },
+      {
+        text: "What can a blind Cyclops do? I'll kill it",
+        nextText: 80,
+      },
+    ],
+  },
+  {
+    id: 80,
+    text: "Humans and their arrogance has no bounds. Before you can even get near the cyclops, the bilnded Cyclops blindly swings its baton and it lands on top of you. Instantly killing you.",
+    back: "CyclopsBaton",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 79,
+    text: "You somehow manage to escape the cave and trace your way back to the fields to where the Tiger was trapped.",
+    back: "TigerEscaped",
+    options: [
+      {
+        text: "Next",
+        nextText: 81,
+      },
+    ],
+  },
+  {
+    id: 81,
+    text: "You find that the tiger has somehow escaped. You rush back to the castle.",
+    back: "GoToCastle",
+    options: [
+      {
+        text: "Explore the castle",
+        nextText: 7,
+      },
+    ],
+  },
+  {
+    id: 78,
+    text: "You introduce yourself to the Cyclops as...",
+    back: "CyclopsMercy",
+    options: [
+      {
+        text: "A Knight",
+        nextText: 82,
+      },
+      {
+        text: "Nobody",
+        nextText: 84,
+      },
+    ],
+  },
+  {
+    id: 82,
+    text: "The Cyclops opens its mouth and....",
+    back: "CyclopsMouth",
+    options: [
+      {
+        text: "Next",
+        nextText: 83,
+      },
+    ],
+  },
+  {
+    id: 83,
+    text: "Tells you- Foolish human, this cave is littered with the bones of many Knights that came before you! And gobbles you up!",
+    back: "FoolCyclops",
+    options: [
+      {
+        text: "Restart",
+        nextText: -1,
+      },
+    ],
+  },
+  {
+    id: 84,
+    text: "The cyclops doesn't understand your name and scratches its head weakening its grip on you. And you take advantge by poking it in the eye. It is blinded and shrieks out in pain and calls the other cyclops deeper in the cave. You didn't see that coming?",
+    back: "CyclopsLose",
+    options: [
+      {
+        text: "Next",
+        nextText: 85,
+      },
+    ],
+  },
+  {
+    id: 85,
+    text: "But nobody comes to his help!",
+    back: "CyclopsNoOne",
+    options: [
+      {
+        text: "Next",
+        nextText: 86,
+      },
+    ],
+  },
+  {
+    id: 86,
+    text: "Because he was screaming that nobody is trying to kill him. HA ha ha ha ha!",
+    back: "VictoryCyclops", //TODO:
+    options: [
+      {
+        text: "Run like hell",
+        nextText: 79,
       },
     ],
   },
