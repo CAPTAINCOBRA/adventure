@@ -56,19 +56,19 @@ function showTextNode(textNodeIndex) {
       }
 
       // Welcome salutation
-      if (textNode.salut && textNode.byLine) {
-        const titleH1 = document.getElementById("title");
-        titleH1.innerText = textNode.salut;
-
-        const byLineCite = document.getElementById("byLine");
-        byLineCite.innerText = textNode.byLine;
-      } else {
-        const titleP = document.getElementById("title");
-        titleP.remove();
-
-        const byLineCite = document.getElementById("caption");
-        byLineCite.remove();
-      }
+      // if (textNode.salut && textNode.byLine) {
+      //   const titleH1 = document.getElementById("title");
+      //   titleH1.innerText = textNode.salut;
+      //   const byLineCite = document.getElementById("byLine");
+      //   byLineCite.innerText = textNode.byLine;
+      // }
+      // // else {
+      // if (!(textNode.salut && textNode.byLine)) {
+      //   const titleH1 = document.getElementById("title");
+      //   titleH1.innerText = "";
+      //   const byLineCite = document.getElementById("caption");
+      //   // byLineCite.remove();
+      // }
       //Welcome salutation ends
 
       //Bug eka ends
